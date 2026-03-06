@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "112535446699",
+    "project_id": "vistadrive-b0c5c",
+    "storage_bucket": "vistadrive-b0c5c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112535446699:android:1df288ccdfd848ec2a43ee",
+        "android_client_info": {
+          "package_name": "com.menkaura.vistadrive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112535446699-klv117hlpo1h0ie287rfv3vth2m3fnlh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.menkaura.vistadrive",
+            "certificate_hash": "da99eca997edf40ea6f89fa15c935e51259c8617"
+          }
+        },
+        {
+          "client_id": "112535446699-qmce62qqjvk38sblrjkf765k6skoi3tp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.menkaura.vistadrive",
+            "certificate_hash": "d53de263b02421deea1a556e13b661f877b73107"
+          }
+        },
+        {
+          "client_id": "112535446699-3u7ovh4d5p0b1bk9o7v3ime2vpv98er1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "ESTA CLAVE NO PUEDE SER PÚBLICA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112535446699-3u7ovh4d5p0b1bk9o7v3ime2vpv98er1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

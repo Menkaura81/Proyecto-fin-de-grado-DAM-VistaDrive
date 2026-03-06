@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recyclerFragment2">
+
+    <fragment
+        android:id="@+id/recyclerFragment2"
+        android:name="com.menkaura.vistadrive.fragmentos.RecyclerFragment"
+        android:label="fragment_recycler"
+        tools:layout="@layout/fragment_recycler">
+        <action
+            android:id="@+id/action_recyclerFragment_to_configFragment"
+            app:destination="@id/configFragment"/>
+        <action
+            android:id="@+id/action_recyclerFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"/>
+        <action
+            android:id="@+id/action_recyclerFragment_to_createFragment"
+            app:destination="@id/createFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/configFragment"
+        android:name="com.menkaura.vistadrive.fragmentos.ConfigFragment"
+        android:label="fragment_config"
+        tools:layout="@layout/fragment_config" >
+        <action
+            android:id="@+id/action_configFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.menkaura.vistadrive.fragmentos.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <action
+            android:id="@+id/action_detailsFragment_to_navigateFragment"
+            app:destination="@id/navigateFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigateFragment"
+        android:name="com.menkaura.vistadrive.fragmentos.NavigateFragment"
+        android:label="fragment_navigate"
+        tools:layout="@layout/fragment_navigate">
+        <action
+            android:id="@+id/action_navigateFragment_to_puntuateFragment"
+            app:destination="@id/puntuateFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.menkaura.vistadrive.fragmentos.CreateFragment"
+        android:label="fragment_create"
+        tools:layout="@layout/fragment_create">
+        <action
+            android:id="@+id/action_createFragment_to_recyclerFragment"
+            app:destination="@id/recyclerFragment2"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/puntuateFragment"
+        android:name="com.menkaura.vistadrive.fragmentos.PuntuateFragment"
+        android:label="fragment_puntuate"
+        tools:layout="@layout/fragment_puntuate">
+        <action
+            android:id="@+id/action_puntuateFragment_to_recyclerFragment2"
+            app:destination="@id/recyclerFragment2"/>
+    </fragment>
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.menkaura.vistadrive.fragmentos.AdminFragment"
+        android:label="fragment_admin"
+        tools:layout="@layout/fragment_admin" />
+</navigation>
