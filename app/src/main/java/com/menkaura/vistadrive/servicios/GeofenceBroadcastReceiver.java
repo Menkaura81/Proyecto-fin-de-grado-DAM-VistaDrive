@@ -83,7 +83,7 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
                 Log.d(TAG, "Geofence EXIT detectado: " + geofenceId);
 
                 // Desmarcar como pendiente
-                desmarcarGeofencePendiente(context, geofenceId);
+                limpiarGeofencePendiente(context, geofenceId);
 
                 // Marcar como completado
                 marcarGeofenceCompletado(context, geofenceId);
@@ -108,22 +108,6 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
         nuevos.add(geofenceId);
         prefs.edit().putStringSet(KEY_PENDING_GEOFENCES, nuevos).apply();
         Log.d(TAG, "Geofence marcado como pendiente: " + geofenceId);
-    }
-
-
-    /**
-     * Desmarca un geofence del conjunto de pendientes en SharedPreferences.
-     *
-     * @param context    contexto de la aplicacion
-     * @param geofenceId ID del geofence a desmarcar
-     */
-    private void desmarcarGeofencePendiente(Context context, String geofenceId) {
-        SharedPreferences prefs = context.getSharedPreferences(PREFS_PENDING, Context.MODE_PRIVATE);
-        Set<String> pendientes = prefs.getStringSet(KEY_PENDING_GEOFENCES, new HashSet<>());
-        Set<String> nuevos = new HashSet<>(pendientes);
-        nuevos.remove(geofenceId);
-        prefs.edit().putStringSet(KEY_PENDING_GEOFENCES, nuevos).apply();
-        Log.d(TAG, "Geofence desmarcado: " + geofenceId);
     }
 
 
